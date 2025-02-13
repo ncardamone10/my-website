@@ -1,0 +1,79 @@
+# File: experience.toml
+
+[experience]
+
+[[experience.items]]
+title = "RFIC Design COOP"
+organization = "Skyworks"
+location = "Ottawa, ON"
+date = "Sept 2024 - Present"
+details = [
+    { category = "RF Testing and Characterization", description = "Test power amplifier IC prototypes to validate compliance with target specifications. Manage multiple simultaneous automated tests running on several benches." },
+    { category = "RF Simulation", description = "Simulate RF amplifier and package performance using HFSS and ADS test benches" },
+    { category = "Troubleshooting", description = "Troubleshoot automated test software to ensure test/ bench crashes do not hinder tapeout deadlines" },
+    { category = "Soldering and IC Rework", description = "Soldering GaAs and SOI dies to package substrates. Reworking 01005 components to tune RF performance " }
+]
+includeInResume = "True"
+
+[[experience.items]]
+title = "Teaching Assistant"
+organization = "University of Ottawa"
+location = "Ottawa, ON"
+date = "Sept 2023 - April 2024"
+details = [
+    { category = "Lab Instruction and Leadership", description = "Updated and enhanced lab manuals for Circuit Theory 1, conducted laboratory sessions, and instructed students in experimental procedures (Soldering, Arduino, DC and AC Circuits, Lab Instrumentation)." },
+    { category = "Tutorials", description = "Delivered 3 hours of weekly tutorials on circuit analysis techniques, switching circuits, and AC circuit analysis." },
+    { category = "Project Management", description = "Supervised and managed group projects to ensure steady progress and problem resolution." }
+]
+includeInResume = "True"
+
+[[experience.items]]
+title = "Sr Hardware Design COOP Student"
+organization = "Arkalumen"
+location = "Ottawa, ON"
+date = "Jan 2021 - April 2023"
+details = [
+    { category = "PCB Design", description = "Designed and analyzed custom IoT product for light fixture control, including DC to DC converters." },
+    { category = "Assembly and Testing", description = "Assembled, characterized, and validated product prototypes using modern lab equipment." },
+    { category = "Fabrication", description = "Created PCB panels and BOMs of the final product for manufacture at the assembly house." },
+    { category = "Firmware", description = "Wrote and tested firmware on PIC, MSP430, and nRF52-based systems (Bare Metal and Proprietary BT Stack and RTOS). Used MPLab, IAR, Keil toolchains, Doxygen, GitHub, static analysis, and linting tools (Cppcheck). Meta programming with Python was used to tune control systems (Modified PID Loop). Worked with UART, I2C, SPI, and DMX protocols." }
+]
+imagesDirectory = "/images/arkalumen"
+includeInResume = "True"
+
+[[experience.items]]
+title = "COOP Student"
+organization = "Sino-can Energy"
+location = "Tweed, ON"
+date = "May 2020 - August 2020"
+details = [
+    { category = "Design", description = "Designed the electronics hardware for an autonomous greenhouse." },
+    { category = "Fabrication", description = "Fabricated a greenhouse using 6061 Aluminum." },
+    { category = "Installation", description = "Installed PV solar systems at various sites in Ontario." }
+]
+includeInResume = "False"
+imagesDirectory = "/images/sinocan"
+
+[[experience.items]]
+title = "Computer Teacher"
+organization = "A-Head Start"
+location = "Regioplis Notre-Dame CHS, Kingston, ON"
+date = "Aug 2017 - Aug 2018"
+details = [
+    { category = "Teaching", description = "Taught academic, applied, and locally developed students computer skills." },
+    { category = "Empathy", description = "Prepared grade nine students in terms of computer skills for high school." },
+    { category = "Planning and Organization", description = "Prepared daily lesson plans and student activities." }
+]
+includeInResume = "False"
+
+[[experience.items]]
+title = "Loyalist Area Youth Commissioner"
+organization = "Scouts Canada"
+location = "Kingston, ON"
+date = "Sept 2014 - Sept 2017"
+details = [
+    { category = "Management", description = "Managed all youth aspects of the Scouts Canada program." },
+    { category = "Organization", description = "Planned and organized city-wide camping trips." },
+    { category = "Emotional Intelligence", description = "Worked with vulnerable youth towards a common goal." }
+]
+includeInResume = "False"

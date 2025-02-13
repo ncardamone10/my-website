@@ -1,0 +1,36 @@
+
+
+
+[education]
+
+[[education.items]]
+title = "Masters of Applied Science, Electrical and Computer Engineering"
+institution = "University of Ottawa"
+location = "Ottawa, Canada"
+date = "Sept 2023 - Present"
+thesisTitle = "Transmission Line Autorouter using Shape Synthesis"
+specialization = "Electromagnetics, Computational Electromagnetics (CEM), Microwave, and RF Design"
+courses = [
+    "Phase Locked Loops and RX Synchronizers",
+    "Nonlinear Microwave Devices and Modeling",
+    "Signal and Power Integrity in High-Speed Designs",
+    "Antenna Engineering",
+    "Method of Moments"
+]
+
+
+[[education.items]]
+title = "Bachelor of Applied Science, Electrical Engineering"
+institution = "University of Ottawa"
+location = "Ottawa, Canada"
+honors = "Magna Cum Laude"
+date = "Sept 2018 - April 2023"
+courses = [
+    "Microwave Circuits",
+    "Antennas and Electromagnetics",
+    "Electronics Design",
+    "Modern Controls and Signal Processing",
+    "Wireless and Optical Communication Systems",
+    "Embedded Systems",
+    "Scripting and Automation"
+]

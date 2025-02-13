@@ -1,0 +1,24 @@
+[hobbies]
+
+[[hobbies.items]]
+title = "Hobby Electronics"
+description = "Design and fabrication of electronic projects, lab work, and measurements, spanning over 9 years."
+imageDirectory = "/images/lab_bench"
+
+[[hobbies.items]]
+title = "3D Printing"
+description = "3D printing household/ lab accessories/ encasements for various projects as well as some percussion instruments"
+
+
+[[hobbies.items]]
+title = "Jazz and Big Band Music"
+description = "Playing drums and piano in various jazz band, big band and concert band setups, for around 10 years."
+imageDirectory = "/images/band"
+
+[[hobbies.items]]
+title = "Photography"
+description = "Occasionally brings a camera out when hiking/ snowshoeing"
+imageDirectory = "/images/photography"
+
+
+

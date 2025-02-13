@@ -1,0 +1,919 @@
+# File: projects.toml
+
+[projects]
+
+# Project 1: Capstone Design Project
+[[projects.items]]
+title = "Capstone Design Project: USB-C Galvanic Isolator"
+shortDescription = """
+Designed a USB-C isolator prototype to isolate 100W of power and 20 Gb/s of data throughput. Tasked with USB3.2 data isolation, assisting systems and firmware design, PCB design and review, and project management.
+"""
+date = "2022/23"
+slug = "capstone-usb-c-isolator"
+imageDirectory = "/images/projects/capstone"
+includeInResume = "False"
+longDescription = """
+The USB-C Galvanic Isolator was designed to bridge the gap in USB-C technology by providing isolation for both power and data at modern USB 3.2 Gen 2x2 standards. This innovative device is designed to achieve 20 Gb/s transmission rate while delivering up to 100W of DC power, supporting USB-C Power Delivery (PD) specifications.
+
+The system comprises three key subsystems: power isolation, data isolation, and system control. The power isolation system features a primary-side regulated (PSR) flyback converter combined with a buck regulator for versatile voltage handling, supporting USB PD voltage levels (5V, 9V, 15V, and 20V). The data isolation uses a wideband dipole antenna like structure and high-speed differential amplifiers, to ensure communication between devices while maintaining electrical isolation.
+
+### Key features include:
+**Data Logging and Control**: Integrated PC control for real-time monitoring and logging of current, voltage, and power metrics.
+
+**Scalable Design**: Modular architecture using daughterboards allows easy customization and future upgrades with in a team environment.
+
+**Thermal and Safety Protections**: Thermal regulation mechanisms and overvoltage/current protection safeguard both the device and connected systems.
+
+**Mechanical Prototyping**: Laser-cut MDF enclosure to provide simple protection for the hardware during the design phase.
+
+This project leveraged advanced tools like AWR Microwave Office, LTSpice, and Fusion 360 to simulate, design, and test various components of the system. The collaborative efforts culminated in a somewhat functional prototype with  potential for industry applications in medical devices, test equipment, and data centers.
+"""
+tags = [
+    "USB-C",
+    "USB3.2",
+    "Power Isolation",
+    "Flyback Converter",
+    "Buck Converter",
+    "PCB Design",
+    "Embedded Systems",
+    "Electromagnetic Simulation",
+    "Thermal Management",
+    "Project Management",
+    "Fusion 360",
+    "LTSpice",
+    "AWR Microwave Office"
+]
+
+
+# Project 2: Microwave Power Amplifier PCB
+[[projects.items]]
+title = "Microwave Power Amplifier PCB"
+shortDescription = """
+Designed and implemented a Single Stage Class A Power Amplifier for broad bandwidth applications around 3 GHz. Focused on achieving high linearity and low distortion, with gain characterization and optimization through modern methodologies.
+"""
+date = "Winter 2023"
+imageDirectory = "/images/projects/rf_power_amp"
+slug = "microwave-power-amplifier"
+includeInResume = "True"
+longDescription = """
+The Single Stage Class A Power Amplifier was designed for broad bandwidth applications at approximately 3 GHz, emphasizing high linearity and low distortion. The project included two major design revisions to overcome challenges in stability, gain, and component availability.
+
+### Key Features:
+**Design Approach**: Utilized advanced design methodologies, including MATLAB scripting and AWR optimization tools, to model input and output matching networks and ensure system stability across a wide frequency range.
+
+**RF PCB Layout**: Designed a high-performance RF layout using Altium Designer in conjunction with AWR Microwave Office. Focused on achieving 20 dB gain while maintaining bandwidth.
+
+**Bias Circuitry**: Developed a separate bias circuit to stabilize power delivery using USB as the primary power source. Incorporated LM317 linear regulators and surface mount components to make a current mirror like bias circuit.
+
+**Fabrication and Testing**: Fabricated the RF PCB using Duroid 5880 material for high-frequency performance, bonded to FR4 for mechanical rigidity. Characterized the amplifier using a VNA to measure S-parameters.
+
+### Challenges:
+- The initial PCB revision faced stability issues and insufficient gain due to design errors and incorrect biasing.
+- Revision two improved the design, selecting a BFP620H transistor for since it wasn't obsolete.
+
+### Applications:
+- Demonstrates potential for use in RF systems requiring low distortion and broad bandwidth, such as wireless communication and RF testing equipment.
+
+### Skills Demonstrated:
+- RF design principles and optimization using AWR and MATLAB scripting.
+- PCB design and fabrication for high-frequency applications.
+- Hands-on testing with VNA and RF characterization tools.
+
+This project highlights the importance of iterative design, teamwork, and modern RF design methodologies to achieve functional prototypes in demanding microwave applications.
+"""
+tags = [
+    "RF Amplifier Design",
+    "Class A Amplifier",
+    "AWR Microwave Office",
+    "Altium Designer",
+    "MATLAB",
+    "Linear Regulators",
+    "PCB Fabrication",
+    "VNA Characterization",
+    "S-Parameter Measurements",
+    "Duroid 5880",
+    "RF Design",
+    "Bias Circuitry"
+]
+
+# Project 3: Patch Antenna Array PCB
+[[projects.items]]
+title = "Patch Antenna Array PCB"
+shortDescription = """
+Designed a four-element patch antenna array operating at 5 GHz. The array was optimized for a cardioid radiation pattern, fabricated on RT/Duroid 5880 material, and characterized in an anechoic chamber as well as with a VNA.
+"""
+date = "Winter 2023"
+imageDirectory = "/images/projects/patch_antenna"
+slug = "patch-antenna-array"
+includeInResume = "True"
+longDescription = """
+The Patch Antenna Array PCB project involved the design, simulation, fabrication, and testing of a rectangular microstrip patch antenna array operating at 5 GHz. This project aimed to enhance the performance of individual patch antennas by arranging them in a four-element linear array to achieve a cardioid radiation pattern.
+
+### Key Features:
+**Design and Simulation**: The array was designed using equations derived from Transmission Line theory and simulated using AWR Microwave Office. The individual elements were optimized for impedance matching (i.e. bandwidth).
+
+**Fabrication**: The PCB was fabricated on RT/Duroid 5880 material with a dielectric constant of 2.2. The layout was created in AWR and exported to Altium Designer for PCB manufacturing.
+
+**Feed Network**: Implemented a transmission line network with butterfly stubs and quarter-wave transformers for impedance matching (200, 100, and 50 ohms) to ensure low return loss and uniform power delivery to all elements.
+
+**Characterization and Testing**: The fabricated array was tested in an anechoic chamber to measure radiation patterns, polarization, and gain. Return loss was measured using a VNA, with the experimental results showing better performance than simulated values (e.g., return loss of -32 dB experimentally versus -7 dB in simulations).
+
+### Challenges:
+- Simulation inconsistencies in AWR required multiple iterations and workarounds to achieve stable results.
+- Measured center frequency shifted to 4.8 GHz from the intended 5 GHz due to fabrication tolerances and simulation discrepancies.
+
+### Applications:
+- Suitable for use in RF systems requiring high gain and directivity, such as wireless communication and radar systems.
+
+### Skills Demonstrated:
+- Antenna design and optimization using AWR Microwave Office.
+- PCB design for high-frequency applications with Altium Designer.
+- Electromagnetic characterization in an anechoic chamber using a VNA.
+- Iterative design process and problem-solving in RF simulation and testing.
+
+This project highlights the iterative nature of RF design and the importance of integrating simulation, fabrication, and measurement techniques to achieve high-performance antenna arrays.
+"""
+tags = [
+    "Patch Antenna Design",
+    "Antenna Array",
+    "AWR Microwave Office",
+    "Altium Designer",
+    "RT/Duroid 5880",
+    "Quarter-Wave Transformers",
+    "Butterfly Stubs",
+    "VNA Characterization",
+    "RF Simulation",
+    "Anechoic Chamber Testing",
+    "Electromagnetics",
+    "PCB Fabrication"
+]
+
+
+# Project 4: Neural Network Controller
+[[projects.items]]
+title = "Neural Network Control Law for a Buck Converter"
+shortDescription = """
+Developed a Neural Network based controller to control the voltage regulation of a buck converter in a Simulink using a state space modeling approach.
+"""
+date = "Winter 2022"
+imageDirectory = "/images/projects/nn_controller"
+slug = "neural-network-buck-converter"
+includeInResume = "True"
+longDescription = """
+The Neural Network Control Law project focused on optimizing the voltage regulation of a DC-DC buck converter by addressing the limitations of traditional PID controllers in nonlinear and uncertain conditions. This was implemented in simulation using MATLAB/ Simulink using a state space modeling approach. 
+
+### Key Features:
+**Design Approach**:  
+- The control law integrates the strengths of Model Predictive Control (MPC) and Neural Networks.  
+- Trained a fully connected feedforward neural network to interoperate with the state-space model of the buck converter for better adaptability to parameter variations.  
+
+**Implementation**:  
+- The neural network was trained using a large number of data points generated from simulation under varying load and reference voltage conditions.  
+- Input parameters included inductor current, output voltage, and duty cycle from the previous time step.  
+
+**Controller Performance**:  
+- Demonstrated superior transient response during load changes and reference voltage shifts.  
+- Comparable overshoot and oscillations to PID controllers.  
+
+### Challenges:
+- The initial training phase required preprocessing large datasets for effective model performance.  
+- Iterative tuning was necessary to balance computational efficiency and control accuracy.  
+
+### Applications:
+- Suitable for DC-DC converters in renewable energy systems, electric vehicles, and portable electronics.  
+- Extends to other power electronics applications where precise voltage regulation is required.  
+
+### Skills Demonstrated:
+- Control system design using neural networks.  
+- Data collection and preprocessing for machine learning applications.  
+- Simulation and modeling of power electronics systems.  
+- Optimization techniques for nonlinear controllers.  
+
+This project highlights the potential of neural networks to revolutionize power electronics control by overcoming traditional limitations and ensuring robust performance in dynamic environments.
+"""
+tags = [
+    "Neural Networks",
+    "Buck Converter",
+    "Voltage Regulation",
+    "MATLAB",
+    "Simulink",
+    "Data Preprocessing",
+    "Control Systems",
+    "Machine Learning",
+    "Nonlinear Systems",
+    "Power Electronics"
+]
+
+
+# Project 5: Raspberry Pi Pen Plotter
+[[projects.items]]
+title = "Raspberry Pi Pen Plotter"
+shortDescription = """
+Developed a brachiograph (robotic arm) capable of processing images and drawing them with optimized fidelity using a Raspberry Pi and Python.
+"""
+date = "Winter 2022"
+imageDirectory = "/images/projects/pen_plotter"
+slug = "raspberry-pi-pen-plotter"
+includeInResume = "False"
+longDescription = """
+The Raspberry Pi Pen Plotter project focused on developing a brachiograph—a robotic arm capable of processing input images, converting them into machine instructions, and drawing them on paper. This system was designed to address challenges in coordinate transformation, plotting accuracy, and drawing fidelity.
+
+### Key Features:
+**Image Processing and Drawing**:  
+- The system converts input images to machine instructions and SVG files, which are used to control the brachiograph.  
+- Supported drawing operations include outlines and filled shapes, with filled shapes showing superior performance due to improved edge detection.  
+
+**Coordinate Transformation**:  
+- Implemented robust algorithms (inverse kinematics) to transform pixel coordinates into arm joint positions using Python and the BrachioGraph library.  
+- Fine-tuned the plotting area bounds to maximize drawing space while maintaining operational stability.  
+
+**Hardware Integration**:  
+- Controlled via a Raspberry Pi, with additional integration of pots for feedback. Pots were read by an external ADC with was then sent to the Pi via I2C.
+- The pen plotter uses two arms (10 cm and 10.4 cm) for plotting, with coordinates dynamically calculated using inverse kinematics.  
+
+**Data Visualization**:  
+- Successfully captured and analyzed pot data to validate movement accuracy and compare actual vs. expected positions.  
+- Developed tools in MATLAB and Python for analyzing positional fidelity and diagnosing errors.  
+
+### Challenges:
+- Overcame plotting area inconsistencies by adjusting transformation bounds and resolving arm length constraints.  
+- Addressed fidelity issues due to non-coplanar arm alignment and servo inaccuracies.  
+- Explored advanced control methods, such as fuzzy logic controllers and genetic algorithms, to improve system robustness.  
+
+### Applications:
+- Demonstrates potential for educational purposes, such as teaching embedded systems and robotics concepts.  
+- Provides a foundation for expanding to CNC drawing or other robotic manipulation tasks.  
+
+### Skills Demonstrated:
+- Embedded systems programming using Raspberry Pi.  
+- Image processing and machine instruction generation.  
+- Coordinate transformation and trigonometric calculations.  
+- MATLAB and Python scripting for data analysis and visualization.  
+- Collaborative team-based hardware and software development.  
+
+This project showcases the potential of simple robotic systems to execute complex tasks and highlights the importance of iterative design and troubleshooting in embedded systems and robotics.
+"""
+tags = [
+    "Raspberry Pi",
+    "Python",
+    "Image Processing",
+    "Robotics",
+    "MATLAB",
+    "Inverse Kinematics",
+    "Embedded Systems",
+    "Data Analysis",
+    "Fuzzy Logic Control",
+]
+
+
+# Project 6: Basic Computer on an FPGA
+[[projects.items]]
+title = "Basic Computer on an FPGA"
+shortDescription = """
+Designed, simulated, and implemented a basic CPU on an FPGA using VHDL, integrating features from RISC-V, PIC, and Ben Eater's breadboard computer. The system supports arithmetic operations, memory management, and conditional branching.
+"""
+date = "Fall 2019"
+imageDirectory = "/images/projects/fpga_basic_computer"
+slug = "basic-computer-fpga"
+includeInResume = "False"
+longDescription = """
+The Basic Computer on an FPGA project focused on designing and implementing a simplified CPU capable of executing basic instructions and supporting conditional branching. The CPU was developed in VHDL to ensure modularity and scalability, and the design incorporated elements from RISC-V, PIC microcontrollers, and Ben Eater's breadboard computer.
+
+### Key Features:
+**Instruction Set Architecture (ISA)**:  
+- Implemented a small set of instructions, including arithmetic operations (ADD, SUB, INC, DEC), logical operations (AND, OR, XOR), memory operations (LOAD, STORE), and conditional branching.  
+- Added advanced instructions like CALL and RETURN to facilitate function calls using a stack.  
+
+**CPU Architecture**:  
+- Divided into hierarchical levels: Top, CPU, Blocks, and Pieces for modular design.  
+- Features a program counter and a stack (64 locations) to support branching and function calls.  
+- Implemented an 8-bit ALU with working and data registers for simple computation.  
+- Added asynchronous debugging functionality to test register and memory operations.  
+
+**Memory and IO**:  
+- RAM module supports 256x8-bit memory, though hardware limitations led to challenges with stability and initialization.  
+- Multiplexed LED output for efficient current handling, driven by a clock divided down to 6 Hz.  
+
+**Development and Debugging**:  
+- Debug protocol enabled asynchronous loading of registers and inspection of internal states via dedicated debug ports.  
+- Integrated an external clock generator and divider and physical I/O for stability and visualization.  
+
+### Challenges:
+- RAM initialization issues were addressed by adding a custom halt instruction.  
+- Simulation limitations in Quartus and Lattice Diamond exceeded FPGA memory constraints.  
+
+### Applications:
+- Educational use for teaching computer architecture and CPU design.  
+- A foundation for scaling to 32-bit or 64-bit architectures by modifying VHDL definitions.  
+
+### Skills Demonstrated:
+- CPU design and modular development in VHDL.  
+- Memory architecture and management for RAM and stack operations.  
+- Debugging complex systems using asynchronous protocols.  
+- FPGA implementation using Altera DE2-115 and MachXO3LF kits.  
+- Integration of theoretical and practical knowledge of computer architecture.  
+
+This project showcases the iterative design process and highlights the importance of modularity and scalability in CPU development, providing a valuable learning experience in computer architecture.
+"""
+tags = [
+    "FPGA Design",
+    "CPU Design",
+    "VHDL",
+    "RISC-V",
+    "PIC Microcontroller",
+    "ALU Design",
+    "Stack Operations",
+    "RAM Management",
+    "Debug Protocols",
+    "Clock Division",
+    "Conditional Branching"
+]
+
+
+# Project 7: LED Step-Up Driver (SEPIC Converter)
+[[projects.items]]
+title = "LED Step-Up Driver (SEPIC Converter)"
+shortDescription = """
+Designed and implemented a SEPIC converter-based constant current LED driver for a desk lamp, using the LT8570 IC for efficient power regulation and system control.
+"""
+date = "Winter 2022"
+imageDirectory = "/images/projects/led_step_up_driver"
+slug = "led-step-up-driver-sepic"
+includeInResume = "False"
+longDescription = """
+The LED Step-Up Driver project utilized a Single-Ended Primary Inductor Converter (SEPIC) to regulate current for a simple desk lamp. This constant current LED driver, powered by a 12V input, provided adjustable current output while maintaining efficiency and thermal stability.
+
+### Key Features:
+**Converter Design**:  
+- Used the LT8570 SEPIC Converter IC for control and switching operations.  
+- Designed the system to operate at 12V input with an output of 40V and 20mA adjustable current, meeting the requirements for powering LED light engines.  
+- Incorporated a current sense amplifier (INA181) and a shunt resistor for accurate current regulation.  
+
+**Prototyping and Testing**:  
+- Prototyped the converter on a protoboard to evaluate thermal performance and efficiency.  
+- Assembled and tested a 4-layer PCB with improved thermal dissipation and compact layout.  
+- Achieved a maximum observed temperature of 30.5°C on the LT8570 IC during extended operation.  
+
+**Simulation and Optimization**:  
+- Developed MATLAB scripts for brute-force searching component values and refining design equations.  
+- Validated component choices through extensive LTSpice simulations, focusing on efficiency and output stability.  
+- Identified efficiency limitations (maximum 72%) and optimized switching frequency behavior for the LT8570 IC.  
+
+### Challenges:
+- Addressed frequency deviation caused by the IC's internal frequency foldback block when using the LT8570 in a nonstandard configuration.  
+- Managed thermal challenges during prototyping by optimizing PCB layout and component selection.  
+
+### Applications:
+- Demonstrates potential for LED lighting systems, battery-powered devices, and other applications requiring compact, efficient constant current drivers.  
+
+### Skills Demonstrated:
+- Power electronics design and optimization using LTSpice and MATLAB.  
+- PCB design and thermal management for DC-DC converters.  
+- Experimental validation and troubleshooting of SEPIC topologies.  
+- Circuit prototyping and iterative refinement for real-world applications.  
+
+This project highlights the importance of leveraging simulation, scripting, and iterative design to address practical challenges in power electronics systems.
+"""
+tags = [
+    "SEPIC Converter",
+    "LED Driver",
+    "Current Regulation",
+    "MATLAB",
+    "LTSpice",
+    "Thermal Management",
+    "PCB Design",
+    "Power Electronics",
+    "DC-DC Converters",
+    "Rapid Prototyping"
+]
+
+
+# Project 8: MealWorks Robotic Kitchen
+[[projects.items]]
+title = "MealWorks Robotic Kitchen"
+shortDescription = """
+Developed a prototype for a robotic kitchen system capable of automatically measuring, storing, and dispensing ingredients, focusing on modularity, scalability, and compliance with food safety regulations. This was part of a 1st year design course.
+"""
+date = "Winter 2019"
+imageDirectory = "/images/projects/robot_kitchen"
+slug = "mealworks-robotic-kitchen"
+includeInResume = "False"
+longDescription = """
+The MealWorks Robotic Kitchen project aimed to design and prototype an automated system capable of preparing meals efficiently while adhering to strict food safety regulations. The system included multiple subsystems for ingredient storage, measurement, dispensing, and modular transportation. This was part of a 1st year design course.
+
+### Key Features:
+**Ingredient Measurement and Dispensing**:  
+- Designed a gravity-fed valve and hopper system to measure and dispense ingredients accurately using adjustable platforms and servo-controlled cutoff valves.  
+- Incorporated modular design to handle dry ingredients, wet ingredients, and raw meat separately, minimizing contamination risks.  
+
+**Hopper System**:  
+- Developed a food-grade hopper system with temperature monitoring to ensure perishable ingredients remained below 4°C as per food safety guidelines.  
+- Integrated laser-cut MDF and 3D-printed PLA components for the hopper structure.  
+
+**Cart and Track System**:  
+- Designed a cart and track system to transport ingredients from storage to the cooking station efficiently.  
+- Used robust materials like steel and aluminum to construct a load-bearing, stable track system.  
+
+**Automation and Electronics**:  
+- Controlled by Arduino with stepper motors and servos to operate the dispensing and transportation systems.  
+- Implemented custom algorithms for motor control, position sensing, and feedback.  
+
+### Challenges:
+- Addressed mechanical limitations in the gear system of the valve and refined its design for smoother operation.  
+- Resolved issues with material tolerances and 3D printing artifacts through iterative prototyping.  
+
+### Applications:
+- Demonstrates potential for use in commercial kitchens, catering services, and other food preparation industries where automation can enhance efficiency and hygiene.  
+- Although not recommended since the motivation from the client was to replace human workers in the kitchen.
+
+### Skills Demonstrated:
+- System-level design and integration for modular automation.  
+- Mechanical prototyping using CAD tools and 3D printing.  
+- Embedded systems programming with Arduino.  
+- Compliance with food safety regulations and standards.  
+
+This project showcases the importance of iterative design, testing, and interdisciplinary collaboration in developing complex systems that address real-world challenges.
+"""
+tags = [
+    "Automation",
+    "Robotic Systems",
+    "Food Safety",
+    "Arduino",
+    "Servo Motors",
+    "Stepper Motors",
+    "3D Printing",
+    "MDF Fabrication",
+    "Valve Mechanisms",
+    "Mechanical Prototyping"
+]
+
+
+# Project 9: Two-Channel LED Controller
+[[projects.items]]
+title = "Two-Channel LED Controller"
+shortDescription = """
+Developed a two-channel constant current LED driver system using a STM32 microcontroller, integrating buck converters and achieving approximately 85% efficiency.
+"""
+date = "2024"
+imageDirectory = "/images/projects/two_channel_led_controller"
+slug = "two-channel-led-controller"
+includeInResume = "True"
+longDescription = """
+The Two-Channel LED Controller project focused on designing and implementing a system to control the brightness and correlated color temperature (CCT) of a LED light engine. This was achieved using a combination of buck converters and a custom STM32-based control system written in C++.
+
+### Key Features:
+**Hardware Design**:  
+- Soldered and assembled two buck converters for each LED channel to regulate power delivery with minimal losses on perf board.
+- The converters were optimized for 85% efficiency, with stable operation across different brightness and CCT levels.  
+
+**Control System**:  
+- Developed firmware using HAL libraries to control PWM outputs for precise LED brightness and CCT adjustment in C++.
+- Integrated two potentiometers for user control over brightness and CCT, with inputs processed via DMA-enabled ADC channels.  
+
+**Flicker Reduction**:  
+- Implemented a moving average low-pass filter (FIR LPF) to eliminate flicker and ensure smooth LED operation.  
+
+**System Features**:  
+- Button-based system control for turning the LED engine on and off, with software debounce for reliability.  
+- Real-time updates to PWM duty cycles for maintaining consistent performance under varying input conditions.  
+
+**Testing and Validation**:  
+- Achieved approximately 85% efficiency in the buck converters during testing using a DC Electronic Load. 
+- Verified smooth transitions in brightness and CCT adjustments via oscilloscope measurements of PWM signals.  
+
+### Challenges:
+- Debugging the interaction between DMA and PWM for real-time updates while maintaining system stability.  
+- Ensuring thermal stability of the buck converters during extended operation.  
+
+### Applications:
+- Suitable for LED lighting systems requiring brightness and color temperature control, such as in task lighting or adjustable ambient lighting setups.  
+
+### Skills Demonstrated:
+- Embedded systems development using STM32 HAL libraries and C++.  
+- Design, assembly, and testing of buck converters.  
+- PWM control and DMA integration for real-time processing.  
+- Low-pass FIR filtering techniques for flicker reduction in LED systems.  
+
+This project highlights the integration of hardware design and firmware development to create an efficient, user-friendly LED control system.
+"""
+tags = [
+    "STM32",
+    "C++",
+    "HAL Libraries",
+    "LED Driver",
+    "Buck Converters",
+    "PWM Control",
+    "DC Electronic Load",
+    "Low-Pass Filtering",
+    "FIR Filters",
+    "Embedded Systems"
+]
+
+
+# Project 10: Variable AC Power Supply
+[[projects.items]]
+title = "Variable AC Power Supply"
+shortDescription = """
+Designed a prototype for a variable AC power supply with an adjustable trip point for safely testing mains-powered projects. Developed using Arduino on a STM32 Blue Pill Dev Board.
+"""
+date = "2019"
+imageDirectory = "/images/projects/variable_ac_power_supply"
+slug = "variable-ac-power-supply"
+includeInResume = "False"
+longDescription = """
+The Variable AC Power Supply project aimed to design a customizable power supply system for safely testing mains-powered devices under controlled conditions. The system featured an adjustable trip point for protection and included plans for measuring Total Harmonic Distortion (THD) and Power Factor (PF) of the Device Under Test (DUT).
+
+### Key Features:
+**Breadboard Prototype**:  
+- Developed the initial prototype on a breadboard using an STM32 Blue Pill microcontroller programmed with Arduino.  
+- Focused on creating an adjustable AC power supply with user-settable trip points to prevent overloads or unsafe operation.  
+
+**Safety Mechanisms**:  
+- Designed to monitor current and voltage levels dynamically, shutting off power when predefined safety thresholds were exceeded.  
+
+**Planned Measurements**:  
+- Intended to include THD and PF measurements to evaluate the electrical performance of the DUT and ensure compliance with power quality standards.  
+
+### Challenges and Outcome:
+- The project encountered challenges in achieving stable and precise measurements on the breadboard prototype.  
+- Ultimately, the project was abandoned in favor of a commercial solution that met the same requirements with higher reliability.  
+
+### Applications:
+- The project was designed for testing and debugging mains-powered projects safely and efficiently in a controlled environment.  
+
+### Skills Demonstrated:
+- Embedded systems programming with Arduino on STM32.  
+- Prototyping and troubleshooting on breadboards.  
+- Design of safety mechanisms for high-voltage applications.  
+- Fundamental understanding of THD, PF, and their role in power quality assessment.  
+
+While the project was not completed due to technical and resource limitations, it provided valuable experience in system prototyping and embedded control for high-voltage applications.
+"""
+tags = [
+    "STM32",
+    "Arduino",
+    "AC Power Supply",
+    "Breadboard Prototyping",
+    "Embedded Systems",
+    "THD Measurement",
+    "Power Factor",
+    "Safety Mechanisms",
+    "High-Voltage Testing",
+    "Project Iteration"
+]
+
+
+# Project 11: Voice Controlled TV Remote
+[[projects.items]]
+title = "Voice Controlled TV Remote"
+shortDescription = """
+Developed a voice-controlled remote for standard TVs using a Raspberry Pi and Arduino, designed for offline functionality and accessibility for users with limited motor skills. This was part of a 2nd year design course.
+"""
+date = "Winter 2019"
+imageDirectory = "/images/projects/voice_controlled_tv_remote"
+slug = "voice-controlled-tv-remote"
+includeInResume = "False"
+longDescription = """
+The Voice Controlled TV Remote project aimed to create an offline, cost-effective, and accessible device for individuals with limited motor skills, particularly in hospital and care home settings. This system converts voice commands into infrared (IR) signals, allowing it to control standard TVs without requiring Wi-Fi or smart TV capabilities. This was part of a 2nd year design course.
+
+### Key Features:
+**Voice Command Processing**:  
+- Used a Raspberry Pi equipped with the Google AIY Voice Kit for speech-to-text conversion and command interpretation.  
+- Processed commands like "Power ON/OFF," "Volume UP/DOWN," and "Channel UP/DOWN."  
+
+**Infrared Signal Transmission**:  
+- An Arduino Nano received commands from the Raspberry Pi via I2C communication and sent corresponding IR signals using LEDs.  
+- Supported standard TV IR protocols, with signals verified through oscilloscope readings.  
+
+**User Feedback and Safety**:  
+- Included RGB LEDs for real-time feedback: Red (listening), Green (ready to receive a command), and Yellow (error state).  
+- Designed a 3D-printed case with integrated audio amplification and protection against spills.  
+
+**Prototyping and Iterative Development**:  
+- Progressed through multiple prototypes to refine voice recognition, IR communication, and hardware integration.  
+- Improved IR transmission power by adding multiple IR LEDs and optimizing current-limiting resistors.  
+
+### Challenges:
+- Encountered issues with offline voice processing libraries, leading to the temporary use of Google's online voice database.  
+- Overcame hardware layout challenges by transitioning from breadboard to protoboard designs.  
+
+### Applications:
+- Targeted for use in hospital and care home environments to provide intuitive TV control for individuals with disabilities.  
+- Potential for broader consumer applications as an offline, voice-controlled remote solution.  
+
+### Skills Demonstrated:
+- Embedded systems integration using Raspberry Pi and Arduino.  
+- Voice-to-signal conversion and I2C communication.  
+- IR protocol implementation and hardware design for signal transmission.  
+- Iterative prototyping using 3D printing and PCB design.  
+
+This project demonstrates the importance of user-centric design in creating accessible technology and showcases the integration of hardware, firmware, and voice processing.
+"""
+tags = [
+    "Raspberry Pi",
+    "Arduino",
+    "Voice Recognition",
+    "Google AIY Voice Kit",
+    "IR Communication",
+    "I2C Protocol",
+    "3D Printing",
+    "Embedded Systems",
+    "Accessibility Design",
+    "RGB Feedback",
+    "Iterative Prototyping"
+]
+
+
+# Project 12: Web Relay (Christmas Light Controller)
+[[projects.items]]
+title = "Web Relay (Christmas Light Controller)"
+shortDescription = """
+Developed a web-controlled relay system using an ESP8266 to toggle mains-powered devices and control PWM dimming for RGB lighting via a browser interface.
+"""
+date = "December 2022"
+imageDirectory = "/images/projects/web_relay"
+slug = "web-relay-christmas-light-controller"
+includeInResume = "False"
+
+longDescription = """
+The Web Relay project was designed to control mains-powered devices and RGB lighting using an ESP8266 microcontroller with a web interface. Originally developed for controlling Christmas lights, the system has since been migrated to Home Assistant and ESPHome for enhanced automation.
+
+### Key Features:
+**Web-Based Control**:
+  - Hosted a web server on the ESP8266, allowing users to turn lights on/off and adjust RGB lighting via a browser.
+  - Implemented real-time status updates and interactive UI elements.
+
+**Relay and PWM Dimming**:
+  - Controlled a relay using an optocoupler for switching mains power.
+  - Used PWM signals to dim an RGB LED strip for desk lighting applications.
+
+**Time-Based Automation**:
+  - Synchronized with an  NTP server to turn lights on/off at predefined hours.
+  - Integrated Daylight Saving Time (DST) adjustments for accurate scheduling.
+
+**Embedded Systems and Networking**:
+  - Configured Wi-Fi connectivity to operate on a local network.
+  - Supported HTTP requests for remote control and monitoring.
+
+**Doxygen Documentation**:
+  - Fully documented the codebase using Doxygen, providing structured documentation for maintainability and future modifications.
+
+### Challenges:
+- **Reliability of Wi-Fi Connectivity**: Optimized reconnection routines to ensure consistent web server availability.
+- **PWM Dimming Precision**: Calibrated PWM signals to achieve smooth and flicker-free dimming.
+
+### Migration to Home Assistant:
+- The project was later migrated to Home Assistant and ESPHome, enabling seamless integration with broader home automation ecosystems.
+- The hardware setup, consisting of an ESP Thing Dev Board, was repurposed for direct ESPHome compatibility.
+
+### Applications:
+- Originally designed for Christmas light control but extended to smart home applications such as automated desk lighting.
+
+### Skills Demonstrated:
+- Web-based microcontroller control using ESP8266 and Arduino.
+- Wi-Fi networking and HTTP server implementation.
+- Relay control for high-voltage switching.
+- PWM-based LED dimming techniques.
+- Doxygen-based documentation for embedded projects.
+
+This project demonstrates the transition from standalone microcontroller solutions to fully integrated smart home automation systems.
+"""
+tags = [
+    "ESP8266",
+    "Web Server",
+    "Home Automation",
+    "Wi-Fi Control",
+    "Relay Control",
+    "PWM Dimming",
+    "RGB Lighting",
+    "NTP Time Sync",
+    "Doxygen Documentation",
+    "Arduino",
+    "ESPHome",
+    "Home Assistant"
+]
+
+
+# Project 13: Reconfigurable FPGA-Based Filter
+[[projects.items]]
+title = "Reconfigurable FPGA-Based Filter"
+shortDescription = """
+Developing a reconfigurable digital filter on an Eclypse Z7 FPGA development board, integrating ADC/Scope and AWG front-end modules for real-time analog signal processing.
+"""
+date = "In Progress"
+imageDirectory = "/images/projects/fpga_filter"
+slug = "reconfigurable-fpga-filter"
+includeInResume = "True"
+longDescription = """
+The **Reconfigurable FPGA-Based Filter** project aims to implement a dynamic digital filter for real-time signal processing applications. The project utilizes the Eclypse Z7 FPGA development board, integrating high-speed ADC/Scope and AWG modules for analog signal interfacing.
+
+### Key Features:
+**Hardware Implementation:**  
+- Uses the Xilinx Eclypse Z7 FPGA development board, integrating ADC and AWG modules for high-speed analog interfacing.  
+- Leverages the ARM Cortex-A9 processor inside the FPGA for embedded processing.  
+- Implements Xilinx IP cores for efficient ADC and AWG communication.  
+
+**FPGA and Software Development:**  
+- Designed using Vivado and Vitis, with custom logic for reconfigurable filtering.  
+- Runs a PetaLinux image on the FPGA for firmware and embedded processing.  
+- Firmware written in C++, enabling dynamic filter adjustments.  
+
+**PLL Integration:**  
+- Explores Phase-Locked Loops (PLLs), using the reconfigurable filter as the loop filter to analyze and modify frequency response.  
+
+### Applications:
+- Adaptive RF filtering, software-defined radio (SDR), and real-time signal analysis.  
+- Provides a flexible framework for digital filtering techniques in FPGA-based environments.  
+
+### Skills Demonstrated:
+- FPGA-based digital signal processing (DSP).  
+- Embedded Linux (PetaLinux) development for FPGA applications.  
+- C++ firmware development for embedded ARM processors.  
+- Vivado and Vitis toolchain for FPGA design.  
+- Xilinx IP integration for high-speed analog signal processing.  
+
+This project explores the intersection of FPGA computing, embedded systems, and real-time digital filtering, contributing valuable insights into adaptive signal processing and PLL-based control systems.
+"""
+tags = [
+    "FPGA Development",
+    "Digital Filtering",
+    "PLL Design",
+    "Vivado",
+    "Vitis",
+    "PetaLinux",
+    "ARM Cortex-A9",
+    "Embedded Linux",
+    "C++ Firmware",
+    "Xilinx IP",
+    "ADC Interfacing",
+    "AWG Signal Processing"
+]
+
+# Project 14: Smart Home Automation System
+[[projects.items]]
+title = "Smart Home Automation System"
+shortDescription = """
+Developing a smart home automation system using a Raspberry Pi to monitor environmental conditions, automate lighting, and integrate 3D printer and energy monitoring features.
+"""
+date = "In Progress"
+imageDirectory = "/images/random_electronics"
+slug = "smart-home-automation"
+includeInResume = "False"
+longDescription = """
+The Smart Home Automation System is an ongoing project focused on enhancing home efficiency and automation through real-time environmental monitoring and device control. The system runs on a Raspberry Pi, interfacing with multiple sensors and smart devices.
+
+### Key Features:
+**Environmental Monitoring:**  
+- Uses off-the-shelf sensors to measure temperature, humidity, CO2 levels, and other gases.  
+- Logs and analyzes sensor data to track trends and optimize air quality.  
+
+**Lighting Automation:**  
+- Automates Christmas lights based on sunset detection, turning them on after dusk and off before midnight.  
+- Future expansion includes motion-based lighting controls.  
+
+**3D Printer Integration (In Progress):**  
+- Develops a monitoring and control system for real-time status updates and remote access.  
+- Explores OctoPrint integration for remote print management.  
+
+**Energy Usage Monitoring (In Progress):**  
+- Collects and analyzes real-time energy consumption data to identify inefficiencies.  
+- Explores Home Assistant integration for expanded automation.  
+
+### Applications:
+- Enhancing home energy efficiency and security.  
+- Providing real-time environmental monitoring for air quality management.  
+- Enabling remote control and monitoring of smart home devices.  
+
+### Skills Demonstrated:
+- Raspberry Pi-based automation using Python and embedded scripting.  
+- Sensor integration for environmental monitoring.  
+- Home Assistant and IoT development for smart home control.  
+- Real-time data logging and automation logic.  
+
+This project explores the intersection of IoT, automation, and real-time data processing, demonstrating how modular and scalable smart home systems can improve daily living.
+"""
+tags = [
+    "Raspberry Pi",
+    "Smart Home",
+    "Automation",
+    "IoT",
+    "Environmental Monitoring",
+    "Energy Monitoring",
+    "Home Assistant",
+    "Lighting Control",
+    "3D Printer Integration"
+]
+
+# Project 15: Python Instrument Drivers
+[[projects.items]]
+title = "Python Instrument Drivers for Automated Testing"
+shortDescription = """
+Developing Python-based instrument drivers to automate test equipment in a home lab, leveraging SCPI commands, PyVISA, and AI-assisted documentation parsing.
+"""
+date = "In Progress"
+imageDirectory = "/images/lab_bench"
+slug = "python-instrument-drivers"
+includeInResume = "True"
+longDescription = """
+The Python Instrument Drivers project focuses on automating test equipment by generating structured instrument control files from manufacturer documentation and converting them into Python drivers. The system primarily supports Rigol instruments, which follow a common SCPI programming guide layout.
+
+### Key Features:
+**Automated Driver Generation:**  
+- Uses ChatGPT to parse SCPI programming guides and generate TOML-based instrument configuration files.  
+- Converts TOML files into Python drivers that interact with test equipment via PyVISA.  
+
+**Supported Equipment:**  
+- Instruments in the home lab include:  
+  - Oscilloscope  
+  - Arbitrary Waveform Generator (ARB)  
+  - Power Supply (PSU)  
+  - Electronic Load  
+  - Spectrum Analyzer (SpecA)  
+  - Vector Network Analyzer (VNA)
+- Devices are connected over LAN/Ethernet and controlled remotely.  
+
+**SCPI Command Integration:**  
+- Implements structured SCPI command execution for precise instrument control.  
+- Supports querying and setting parameters, automating data acquisition, and instrument responses.  
+
+### Applications:
+- Enables fully automated hardware testing in RF, power electronics, and circuit analysis.  
+- Reduces manual instrument setup time by automating test sequences and data collection.  
+
+### Skills Demonstrated:
+- Python programming for instrument control.  
+- SCPI command structure and execution.  
+- PyVISA integration for networked instruments.  
+- AI-assisted documentation parsing and automation.  
+- TOML-based configuration file generation.  
+
+This project explores AI-driven automation, embedded systems testing, and structured data conversion, creating a scalable framework for automated lab testing.
+"""
+tags = [
+    "Python",
+    "SCPI",
+    "PyVISA",
+    "Instrument Automation",
+    "AI-Assisted Parsing",
+    "TOML Configuration",
+    "LAN/Ethernet Communication",
+    "Automated Testing"
+]
+
+# Project 16: Personal Website
+[[projects.items]]
+title = "Personal Website"
+shortDescription = """
+Developing a modern, interactive portfolio website using Next.js, TypeScript, and Tailwind CSS to showcase projects, experience, and technical skills.
+"""
+date = "In Progress"
+imageDirectory = "/images/random_electronics"
+slug = "personal-website"
+includeInResume = "False"
+longDescription = """
+The Personal Website serves as an interactive portfolio, designed to highlight projects, experience, and technical expertise. Built with modern web technologies, it dynamically loads content from structured data sources. Code was developed using ChatGPT
+
+### Key Features:
+**Tech Stack:**  
+- Built with Next.js and TypeScript for a modern and scalable architecture.  
+- Styled with Tailwind CSS for a responsive UI.  
+- Supports server-side rendering (SSR) and static site generation (SSG).  
+
+**Project Management:**  
+- Projects dynamically load from TOML configuration files, enabling easy updates.  
+
+**Future Development:**  
+- Adding a search and filtering system for project exploration.  
+
+### Skills Demonstrated:
+- Web development with Next.js and TypeScript.  
+- Responsive UI with Tailwind CSS.  
+- Content management with TOML.  
+- Prompt engineering with ChatGPT
+"""
+tags = [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Web Development",
+    "Server-Side Rendering",
+    "Static Site Generation",
+    "TOML Configuration",
+    "Prompt Engineering"
+]
+
+
+# Each of my github repos?
+
+
+# Misc Projects
+
+
+
+
+
+
+
+
+
+

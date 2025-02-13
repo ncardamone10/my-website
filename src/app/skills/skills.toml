@@ -1,0 +1,54 @@
+[skills]
+
+[[skills.items]]
+title = "Electronics"
+imageDirectory = "/images/random_electronics"
+skills = [
+    "PCB and Circuit Design",
+    "Rapid Prototyping",
+    "Automated Testing",
+    "Test and Measurement Instrument Expertise"
+]
+
+[[skills.items]]
+title = "Embedded Systems"
+imageDirectory = "/images/embedded"
+skills = [
+    "ARM, AVR, PIC, MSP, STM32, nRF52, ESP32, RISC-V",
+    "Lattice, Altera and Xilinx 7 series FPGA",
+    "Bare Metal, RTOS and Embedded Linux (petalinux) Development"
+]
+
+[[skills.items]]
+title = "CAD"
+imageDirectory = "/images/cad"
+skills = [
+    "Altium Designer, Eagle, Fusion 360",
+    "ADS, AWR Microwave Office, HFSS, APD",
+    "SPICE (LTSPICE/Multisim/HSPICE), GRASP"
+]
+
+[[skills.items]]
+title = "Programming"
+skills = [
+    "C/C++, Matlab, Python, Javascript, Julia, Rust, Labview/ Simulink",
+    "VHDL, Bash, Doxygen, Git",
+    "LaTeX, SPICE Netlists"
+]
+
+[[skills.items]]
+title = "Shop Work"
+skills = [
+    "Wood/Machine Shop Experience (10/5 years)",
+    "Power and Hand Tools",
+    "Welding and Basic CNC",
+    "3D Printing/ Additive Manufacturing" 
+]
+
+[[skills.items]]
+title = "Software"
+skills = [
+    "GitHub/Git",
+    "IAR, Keil uVision, Eclipse, VS Code",
+    "Excel, Adobe Editing Suite"
+]
