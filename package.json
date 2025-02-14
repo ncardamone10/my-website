@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-      "predev": "node ./scripts/generateImageList.js",
-      "dev": "next dev",
-      "prebuild": "node ./scripts/generateImageList.js",
-      "build": "next build",
-      "start": "next start"
-    },
-
+    "predev": "node ./scripts/generateImageList.js",
+    "dev": "next dev",
+    "prebuild": "node ./scripts/generateImageList.js",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "next": "15.1.3",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",
@@ -35,6 +35,3 @@
     "typescript": "^5"
   }
 }
-
-
-

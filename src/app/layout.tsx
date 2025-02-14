@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FaGithub, FaFileDownload } from "react-icons/fa"; // Import GitHub & Download icons
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Nick Cardamone's Portfolio",
