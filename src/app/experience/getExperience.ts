@@ -1,21 +1,14 @@
-"use server"; // ✅ Ensure this runs on the server-side
-
-import path from "path";
-import fs from "fs";
-import toml from "toml";
-
 export async function getExperience() {
-    const filePath = path.join(process.cwd(), "src/app/experience/experience.toml");
-
     try {
-        const fileContents = fs.readFileSync(filePath, "utf8");
-        const parsedData = toml.parse(fileContents);
+        const response = await fetch("/api/getExperience");
 
-        // ✅ Ensure it's a plain object by using JSON parse/stringify
-        return JSON.parse(JSON.stringify(parsedData));
+        if (!response.ok) {
+            throw new Error(`Error fetching experience: ${response.statusText}`);
+        }
 
+        return response.json();
     } catch (error) {
-        console.error("Error loading experience data:", error);
-        return { experience: { items: [] } }; // Return empty object if there's an error
+        console.error("Error fetching experience:", error);
+        return { experience: { items: [] } };
     }
 }
