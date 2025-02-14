@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FaGithub, FaFileDownload } from "react-icons/fa"; // Import GitHub & Download icons
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react"; // ✅ Import Vercel Analytics
 
 export const metadata: Metadata = {
   title: "Nick Cardamone's Portfolio",
@@ -58,7 +58,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
           </div>
         </header>
+
+        {/* ✅ Main Content */}
         {children} 
+
+        {/* ✅ Add Vercel Analytics Here */}
+        <Analytics />
       </body>
     </html>
   );
