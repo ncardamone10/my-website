@@ -8,22 +8,28 @@ export default function ProjectImageCarousel({ imageDirectory }: { imageDirector
 
     useEffect(() => {
         async function fetchImages() {
+            if (!imageDirectory) return;
+            const cleanDir = imageDirectory.replace(/^\/+/, "").replace(/^images\//, ""); // Remove duplicate `/images/`
+            console.log("Fetching images for:", cleanDir);
+    
             try {
-                const response = await fetch(`/api/getImages?dir=${imageDirectory}`);
+                const response = await fetch(`/api/getImages?dir=${cleanDir}`);
                 const data = await response.json();
-
-                if (data.success) {
+                console.log("Fetched image data:", data);
+    
+                if (data.success && data.images.length > 0) {
                     setImages(data.images);
                 } else {
-                    console.error("Error fetching images:", data.error);
+                    console.error("Error fetching images or no images found:", data.error || "No images");
                 }
             } catch (error) {
                 console.error("Failed to load images:", error);
             }
         }
-
+    
         fetchImages();
     }, [imageDirectory]);
+    
 
     useEffect(() => {
         if (images.length === 0) return;

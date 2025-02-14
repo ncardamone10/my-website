@@ -1,42 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
-export default function ContactPageWrapper() {
-    return (
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}>
-            <ContactPage />
-        </GoogleReCaptchaProvider>
-    );
-}
-
-function ContactPage() {
-    const { executeRecaptcha } = useGoogleReCaptcha();
+export default function ContactPage() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [token, setToken] = useState("");
-
-    // Run reCAPTCHA when the component mounts
-    useEffect(() => {
-        if (executeRecaptcha) {
-            executeRecaptcha("contact").then(setToken);
-        }
-    }, [executeRecaptcha]);
+    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (!token) {
-            alert("reCAPTCHA verification failed. Please refresh the page.");
+        if (!captchaValue) {
+            alert("Please complete the reCAPTCHA verification.");
             return;
         }
 
         const response = await fetch("/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, message, token }),
+            body: JSON.stringify({ name, email, message, token: captchaValue }),
         });
 
         const data = await response.json();
@@ -45,6 +29,7 @@ function ContactPage() {
             setName("");
             setEmail("");
             setMessage("");
+            setCaptchaValue(null); // Reset captcha
         } else {
             alert("Failed to send message. Please try again.");
         }
@@ -69,6 +54,14 @@ function ContactPage() {
                         <label className="block font-semibold">Message</label>
                         <textarea value={message} onChange={(e) => setMessage(e.target.value)}
                                   className="w-full p-2 border border-gray-300 rounded" rows={4} required />
+                    </div>
+
+                    {/* reCAPTCHA v2 Checkbox */}
+                    <div className="mb-4 flex justify-center">
+                        <ReCAPTCHA
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                            onChange={(token) => setCaptchaValue(token)}
+                        />
                     </div>
 
                     <button type="submit"

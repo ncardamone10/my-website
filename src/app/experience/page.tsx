@@ -20,18 +20,25 @@ export default function ExperiencePage() {
 
     const openImageModal = async (imagesDirectory: string) => {
         try {
-            const response = await fetch(`/api/getImages?dir=${imagesDirectory}`);
+            // Remove any leading "/" and ensure the directory format is correct
+            const cleanDir = imagesDirectory.replace(/^\/+/, "").replace(/^images\//, ""); 
+    
+            console.log("Fetching images for:", cleanDir); // Debugging log
+    
+            const response = await fetch(`/api/getImages?dir=${cleanDir}`);
             const data = await response.json();
-            if (data.success) {
+    
+            if (data.success && data.images.length > 0) {
                 setModalImages(data.images);
                 setIsModalOpen(true);
             } else {
-                console.error("Error fetching images:", data.error);
+                console.error("Error fetching images:", data.error || "No images found");
             }
         } catch (error) {
             console.error("Failed to load images:", error);
         }
     };
+    
 
     return (
         <section className="py-20 bg-gray-200">
