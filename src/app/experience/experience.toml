@@ -8,10 +8,11 @@ organization = "Skyworks"
 location = "Ottawa, ON"
 date = "Sept 2024 - Present"
 details = [
-    { category = "RF Testing and Characterization", description = "Test power amplifier IC prototypes to validate compliance with target specifications. Manage multiple simultaneous automated tests running on several benches." },
-    { category = "RF Simulation", description = "Simulate RF amplifier and package performance using HFSS and ADS test benches" },
-    { category = "Troubleshooting", description = "Troubleshoot automated test software to ensure test/ bench crashes do not hinder tapeout deadlines" },
-    { category = "Soldering and IC Rework", description = "Soldering GaAs and SOI dies to package substrates. Reworking 01005 components to tune RF performance " }
+    { category = "RF Testing and Characterization", description = "Tested power amplifier IC prototypes to validate compliance with target specifications. Managed multiple simultaneous automated test benches." },
+    { category = "RF Simulation", description = "Simulated RF amplifier and package performance using HFSS and ADS test benches" },
+    { category = "Package Design", description = "Designed harmonic filters for MCM substrates in APD and HFSS using a PyAEDT scripting approach" },
+    { category = "Troubleshooting", description = "Troubleshooted automated test software to ensure test/ bench crashes do not hinder tapeout deadlines" },
+    { category = "Soldering and IC Rework", description = "Soldered GaAs and SOI dies to package substrates. Rework 01005 components to tune RF performance" }
 ]
 includeInResume = "True"
 
@@ -38,7 +39,7 @@ details = [
     { category = "Fabrication", description = "Created PCB panels and BOMs of the final product for manufacture at the assembly house." },
     { category = "Firmware", description = "Wrote and tested firmware on PIC, MSP430, and nRF52-based systems (Bare Metal and Proprietary BT Stack and RTOS). Used MPLab, IAR, Keil toolchains, Doxygen, GitHub, static analysis, and linting tools (Cppcheck). Meta programming with Python was used to tune control systems (Modified PID Loop). Worked with UART, I2C, SPI, and DMX protocols." }
 ]
-imagesDirectory = "/images/arkalumen"
+#imagesDirectory = "/images/arkalumen"
 includeInResume = "True"
 
 [[experience.items]]
