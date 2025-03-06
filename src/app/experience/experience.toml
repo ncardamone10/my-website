@@ -9,10 +9,10 @@ location = "Ottawa, ON"
 date = "Sept 2024 - Present"
 details = [
     { category = "RF Testing and Characterization", description = "Tested power amplifier IC prototypes to validate compliance with target specifications. Managed multiple simultaneous automated test benches." },
-    { category = "RF Simulation", description = "Simulated RF amplifier and package performance using HFSS and ADS test benches" },
-    { category = "Package Design", description = "Designed harmonic filters for MCM substrates in APD and HFSS using a PyAEDT scripting approach" },
-    { category = "Troubleshooting", description = "Troubleshooted automated test software to ensure test/ bench crashes do not hinder tapeout deadlines" },
-    { category = "Soldering and IC Rework", description = "Soldered GaAs and SOI dies to package substrates. Rework 01005 components to tune RF performance" }
+    { category = "RF Simulation", description = "Simulated RF amplifier and package performance using HFSS and ADS test benches." },
+    { category = "Package Design", description = "Designed harmonic filters for MCM substrates in APD and HFSS using a PyAEDT scripting approach." },
+    { category = "Troubleshooting", description = "Troubleshooted automated test software to ensure test/ bench crashes do not hinder tapeout deadlines." },
+    { category = "Soldering and IC Rework", description = "Soldered GaAs and SOI dies to package substrates. Rework 01005 components to tune RF performance." }
 ]
 includeInResume = "True"
 
