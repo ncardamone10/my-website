@@ -20,7 +20,7 @@ export default function ImageCarousel({ images }: { images: string[] }) {
   useEffect(() => {
     const interval = setInterval(nextImage, 10000); // Auto-scroll every 10 seconds
     return () => clearInterval(interval);
-  }, [nextImage]); // ✅ Added missing dependency
+  }, [nextImage]);
 
   return (
     <div className="relative h-screen overflow-hidden">
@@ -45,14 +45,13 @@ export default function ImageCarousel({ images }: { images: string[] }) {
       </div>
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 bg-gray-600 bg-opacity-30">
-      
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 bg-gray-800 bg-opacity-60 p-4">
         <h2
           className="text-8xl font-bold"
           style={{
-            color: "#1a73e8",
-            textShadow: "2px 2px 5px rgba(255, 255, 255, 1)",
-            WebkitTextStroke: "2px black",
+            color: "#fff", // White text
+            WebkitTextStroke: "2px #000", // Black outline around text
+            textShadow: "4px 4px 8px rgba(0, 0, 0, 0.9)", // Stronger drop-shadow
           }}
         >
           Nick Cardamone
@@ -60,9 +59,9 @@ export default function ImageCarousel({ images }: { images: string[] }) {
         <p
           className="mt-4 text-4xl font-bold"
           style={{
-            color: "#1a73e8",
-            textShadow: "2px 2px 5px rgba(255, 255, 255, 1)",
-            WebkitTextStroke: "1px black",
+            color: "#fff",
+            WebkitTextStroke: "1px #000",
+            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.9)",
           }}
         >
           Electrical Engineering Graduate and RF Design Master&apos;s Student
@@ -70,9 +69,9 @@ export default function ImageCarousel({ images }: { images: string[] }) {
         <p
           className="mt-0 text-4xl font-bold"
           style={{
-            color: "#1a73e8",
-            textShadow: "2px 2px 5px rgba(255, 255, 255, 1)",
-            WebkitTextStroke: "1px black",
+            color: "#fff",
+            WebkitTextStroke: "1px #000",
+            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.9)",
           }}
         >
           Expertise in PCB Design, Embedded Systems, and Electromagnetics.
@@ -80,12 +79,13 @@ export default function ImageCarousel({ images }: { images: string[] }) {
         <p
           className="mt-0 text-2xl font-bold"
           style={{
-            color: "#1a73e8",
-            textShadow: "2px 2px 5px rgba(255, 255, 255, 1)",
-            WebkitTextStroke: "1px black",
+            color: "#fff",
+            WebkitTextStroke: "1px #000",
+            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.9)",
           }}
         >
-          Passionate about creating innovative solutions in electronics and exploring the intersection of hardware and software design.
+          Passionate about creating innovative solutions in electronics and
+          exploring the intersection of hardware and software design.
         </p>
         <Link
           href="/projects"
