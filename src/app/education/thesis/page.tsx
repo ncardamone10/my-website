@@ -28,44 +28,56 @@ Additive shape synthesis begins with an empty design space, where conductive ele
 ### **Thesis Objective**
 The point of this thesis is to combined elements of additive and subtractive shape synthesis to create a software tool that will allow a user to implement this design approach. This tool will need to implement and refine the shaping approach to be usable in industry and produce robust solutions to meet RF and microwave design requirements (such as multilayer filters, matching networks and duplexers).
 `;
-
 export default function ThesisPage() {
     return (
-        <section className="py-20 bg-gray-200">
-            <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold mb-6 text-center">Thesis</h2>
-
-                <div className="bg-white shadow-md rounded p-6 text-gray-900">
-                    <ReactMarkdown 
-                        remarkPlugins={[remarkGfm]} 
-                        rehypePlugins={[rehypeRaw]}
-                        components={{
-                            h2: ({ node, ...props }) => <h2 className="text-3xl font-extrabold text-gray-900 mt-8 mb-4" {...props} />,
-                            h3: ({ node, ...props }) => <h3 className="text-2xl font-bold text-gray-800 mt-6 mb-3" {...props} />,
-                            p: ({ node, ...props }) => <p className="text-lg leading-7 my-4" {...props} />,
-                            ul: ({ node, ...props }) => <ul className="list-disc list-inside my-5 space-y-2 text-lg" {...props} />,
-                            li: ({ node, ...props }) => <li className="ml-4 text-lg leading-7" {...props} />,
-                            strong: ({ node, ...props }) => <strong className="text-gray-900 font-bold" {...props} />
-                        }}
-                    >
-                        {thesisSummary}
-                    </ReactMarkdown>
-                </div>
-
-                {/* Buttons to Education & Publications */}
-                <div className="mt-8 flex justify-center space-x-6">
-                    <Link href="/education">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition transform hover:scale-105">
-                            ⬅ Back to Education
-                        </button>
-                    </Link>
-                    <Link href="/education/thesis/publications">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition transform hover:scale-105">
-                            📄 View Publications
-                        </button>
-                    </Link>
-                </div>
-            </div>
-        </section>
+      <section className="py-20 bg-gray-200">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-6 text-center">Thesis</h2>
+  
+          {/* Buttons row */}
+          <div className="mt-8 flex justify-center space-x-6">
+            <Link href="/education">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                ⬅ Back to Education
+              </button>
+            </Link>
+            <Link href="/education/thesis/publications">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition transform hover:scale-105">
+                📄 View Publications
+              </button>
+            </Link>
+          </div>
+  
+          {/* Thesis Content with extra spacing on top */}
+          <div className="mt-12 bg-white shadow-md rounded p-6 text-gray-900">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                h2: ({ node, ...props }) => (
+                  <h2 className="text-3xl font-extrabold text-gray-900 mt-8 mb-4" {...props} />
+                ),
+                h3: ({ node, ...props }) => (
+                  <h3 className="text-2xl font-bold text-gray-800 mt-6 mb-3" {...props} />
+                ),
+                p: ({ node, ...props }) => (
+                  <p className="text-lg leading-7 my-4" {...props} />
+                ),
+                ul: ({ node, ...props }) => (
+                  <ul className="list-disc list-inside my-5 space-y-2 text-lg" {...props} />
+                ),
+                li: ({ node, ...props }) => (
+                  <li className="ml-4 text-lg leading-7" {...props} />
+                ),
+                strong: ({ node, ...props }) => (
+                  <strong className="text-gray-900 font-bold" {...props} />
+                ),
+              }}
+            >
+              {thesisSummary}
+            </ReactMarkdown>
+          </div>
+        </div>
+      </section>
     );
-}
+  }
