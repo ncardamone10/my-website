@@ -81,6 +81,14 @@ export default function PublicationsPage() {
           >
             🔋 Download SEPIC Converter Paper
           </a>
+          <a
+            href="/publications/Cardamone%20-%20IEEE%20AP-S%20Presentation%20-%2017%20July%202025-1.pdf"
+            download="Cardamone - IEEE AP-S Presentation - 17 July 2025.pdf"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition transform hover:scale-105"
+          >
+            📊 Download AP-S Presentation Slides
+          </a>
+
         </div>
 
         {/* Main content */}
